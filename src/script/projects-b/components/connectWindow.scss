@@ -1,0 +1,112 @@
+$blue: #02478D;
+
+.connect-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7.74rem;
+  height: 6.92rem;
+  margin-top: -3.46rem;
+  margin-left: -3.87rem;
+  font-size: 0;
+  box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, .3);
+  line-height: 1.6;
+  z-index: 999;
+  background-color: #fff;
+
+
+  &>div {
+    height: 100%;
+    display: inline-block;
+    font-size: .18rem;
+    vertical-align: top;
+  }
+
+  .win-left {
+    width: 44%;
+    background-color: #f1f1f1;
+    padding: .40rem .61rem .40rem .20rem;
+
+    .logo {
+      width: 62%;
+    }
+
+    .row-line {
+      margin: .20rem 0;
+      background-color: #D8D8D8;
+    }
+
+    .connect-type {
+      padding: .20rem 0;
+
+      &>div {
+        margin-bottom: .24rem;
+      }
+
+      .type-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $blue;
+        font-size: .20rem;
+
+        img {
+          margin-right: .10rem;
+        }
+      }
+    }
+  }
+
+  .win-right {
+    width: 56%;
+    background-color: #fff;
+    padding: .52rem .20rem;
+  }
+
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .connect-window {
+    width: 18.00rem;
+    height: 22.00rem;
+    margin-top: -11.00rem;
+    margin-left: -9.00rem;
+
+    &>div {
+      font-size: .52rem;
+    }
+
+    .win-left {
+
+      padding: .80rem .60rem .30rem .60rem;
+
+      .logo {
+        width: 80%;
+      }
+
+      .row-line {
+        margin: .60rem 0;
+        background-color: #D8D8D8;
+      }
+
+      .connect-type {
+        padding: .60rem 0;
+
+        &>div {
+          margin-bottom: .62rem;
+        }
+
+        .type-name {
+          font-size: .62rem;
+        }
+      }
+    }
+
+    .win-right {
+
+      padding: 1.00rem .60rem;
+    }
+  }
+}

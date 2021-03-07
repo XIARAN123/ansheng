@@ -1,0 +1,91 @@
+$blue: #02478D;
+$red: #BF324D;
+
+.aj {
+  .job-item {
+    padding: .2rem 0;
+  }
+
+  .uploader-drop {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .uploader-btn {
+    border: none;
+    padding: 0;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .form-item {
+    width: 44%;
+  }
+
+  .submit {
+    border: 1px solid $blue;
+    color: $blue;
+    width: 1.6rem;
+    height: .42rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F8FF;
+    cursor: pointer;
+    margin: .6rem auto;
+
+    &:hover {
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+
+  .j-site {
+    color: #909090;
+    font-size: .14rem;
+    line-height: .5rem;
+  }
+
+  .j-left {
+    color: $blue;
+    font-size: .24rem;
+    padding: .2rem 0;
+    border-bottom: 1px solid $red;
+  }
+}
+
+.job-detail {
+  padding: .40rem 0;
+  color: #333;
+  font-size: .16rem;
+  line-height: .6rem;
+}
+
+.upload-wrap {
+  width: 3.10rem;
+  height: 1.72rem;
+  display: flex;
+  border: 1px solid #e6e6e6;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #919191;
+  font-size: .18rem;
+  line-height: 1.6;
+  cursor: pointer;
+
+  span {
+    color: $red;
+  }
+
+  img {
+    width: .5rem;
+    margin-bottom: .1rem;
+  }
+}

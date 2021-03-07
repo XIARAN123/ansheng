@@ -1,0 +1,424 @@
+$blue: #02478D;
+$red: #BF324D;
+
+.page {
+  overflow: hidden;
+}
+
+.child-banner {
+  width: 19.20rem;
+  height: 8.00rem;
+}
+
+.tabs {
+  padding-bottom: .68rem;
+
+  li {
+    padding: .10rem 0;
+    display: inline-block;
+    margin-right: .40rem;
+    font-size: .20rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    &.active {
+      border-bottom: 2px solid $red;
+      color: $blue;
+
+    }
+  }
+}
+
+.row-line {
+  height: 1px;
+  width: 100%;
+  background-color: #999;
+  margin: .08rem 0;
+  z-index: 999;
+}
+
+.color-blue {
+  color: #02478D;
+}
+
+.must::after {
+  content: '*';
+  color: $red;
+}
+
+.close {
+  position: absolute;
+  right: .20rem;
+  top: .20rem;
+  opacity: .9;
+  cursor: pointer;
+
+  img {
+    width: .24rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.form {
+  margin-top: .2rem;
+}
+
+.form-item {
+  color: $blue;
+  margin-bottom: .20rem;
+
+  .input {
+    margin-top: .12rem;
+
+    input {
+      width: 100%;
+      height: .35rem;
+      border-radius: .06rem;
+      border: 1px solid #E6E6E6;
+      padding: 0 8px;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: .06rem;
+      padding: 8px;
+      border: 1px solid #E6E6E6;
+      height: 1.20rem;
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: .46rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: .04rem;
+    background-color: $blue;
+    cursor: pointer;
+    opacity: .95;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+#main {
+  position: relative;
+  height: 100%;
+  transition: top 1s;
+}
+
+#wrap {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.m-part-title {
+  display: inline;
+  font-size: .92rem;
+  color: $blue;
+  padding-bottom: .51rem;
+  margin-bottom: 1.00rem;
+  border-bottom: .05rem solid $red;
+}
+
+.apply-btn {
+  width: 1.40rem;
+  height: .42rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $blue;
+  background-color: #F1F8FF;
+  border: 1px solid $blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+}
+
+.elis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.child-footer {
+  height: 10.00rem;
+  display: flex;
+}
+
+.banner-middle-text {
+  color: rgba(255, 255, 255, .9);
+  font-size: .90rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: .06rem;
+  transform: translate(-50%, -50%);
+}
+
+.child-content {
+  padding: .80rem 3.56rem;
+  position: relative;
+}
+
+.child-content2 {
+  padding: .80rem 2.6rem;
+
+}
+
+.card-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.00rem;
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .card-left {
+    width: 4.48rem;
+    color: #333333;
+
+    .card-title {
+      font-size: .24rem;
+      font-weight: bold;
+      padding-bottom: .20rem;
+      letter-spacing: .04rem;
+      border-bottom: 1px solid #D8D8D8;
+    }
+
+    .card-content {
+      font-size: .18rem;
+      line-height: .28rem;
+      padding-top: .20rem;
+    }
+  }
+
+  .card-right {
+    width: 6.40rem;
+    height: 3.6rem;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .card-tabs {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: .65rem;
+      display: flex;
+      flex-direction: row;
+      font-size: .14rem;
+      z-index: 999;
+
+      &>div {
+        height: 100%;
+        flex: 1;
+        background-color: $blue;
+        color: #fff;
+        flex-shrink: 0;
+        overflow: auto;
+        cursor: pointer;
+
+        &:nth-child(2n) {
+          background-color: $red;
+
+          &.active {
+            border: $red solid .06rem;
+            color: $red;
+          }
+        }
+
+        &.active {
+          background-color: #fff;
+          border: $blue solid .06rem;
+          color: $blue;
+        }
+
+      }
+    }
+
+    .hover-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, .55);
+      color: #fff;
+      padding: .46rem .56rem;
+
+      .title {
+        font-size: .24rem;
+        padding-bottom: .16rem;
+        border-bottom: 1px solid #fff;
+      }
+
+      .content {
+        font-size: .14rem;
+        padding: .12rem 0;
+      }
+    }
+  }
+}
+
+.m-part,
+.m-part-title {
+  display: none;
+}
+
+.more {
+  color: $blue;
+  cursor: pointer;
+  font-size: .20rem;
+
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.bread {
+  position: absolute;
+  top: .30rem;
+  line-height: .40rem;
+  font-size: .14rem;
+
+  span {
+    cursor: pointer;
+    color: #828282;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.swiper-container,
+.swiper-wrapper {
+  width: 16.8rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+
+  .swiper-container,
+  .swiper-wrapper {
+    width: 18rem;
+    height: 100%;
+  }
+
+  .bread {
+    top: .60rem;
+    line-height: .80rem;
+    font-size: .62rem;
+
+  }
+
+  .m-part-title {
+    display: inline;
+    font-size: .92rem;
+    color: $blue;
+    padding-bottom: .51rem;
+    margin-bottom: 1.00rem;
+    border-bottom: .05rem solid $red;
+  }
+
+  .m-part,
+  .child-content {
+    display: block;
+    padding: .60rem;
+    position: relative;
+  }
+
+  #wrap {
+    overflow: auto;
+  }
+
+  #main {
+    position: static;
+    height: auto;
+  }
+
+  .form-item {
+    margin-bottom: .80rem;
+
+    .input {
+      margin-top: .50rem;
+
+      input {
+        height: 1.15rem;
+      }
+
+      textarea {
+        height: 3.00rem;
+      }
+    }
+
+    .submit-btn {
+      height: 1.40rem;
+    }
+  }
+
+  .close {
+    top: .40rem;
+    right: .40rem;
+
+    img {
+      width: .60rem;
+    }
+  }
+
+  .child-footer {
+    height: 16.00rem;
+  }
+
+  .card-item {
+    margin-bottom: 2.00rem;
+    flex-direction: column !important;
+
+    .card-left {
+      width: 100%;
+      color: #333333;
+
+      .card-title {
+        font-size: .96rem;
+        padding-bottom: .40rem;
+        letter-spacing: .08rem;
+      }
+
+      .card-content {
+        font-size: .62rem;
+        line-height: .90rem;
+        padding: .40rem 0;
+      }
+    }
+
+    .card-right {
+      width: 100%;
+      height: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,43 @@
+#当前开发需要编译的文件入口
+entryDirectory='./src/script/projects-b/entry'
+entryFiles=[
+  'checkItem',
+  'checkItemEdit',
+  'civiConsInspection',
+  'civiConsInspectionCreate',
+  'civiConsInspectionInfo',
+  'civiConsInspectionScore',
+  'civiConsInspectionSech',
+  'problemClassify',
+  'problemSelect',
+  'projectSelect',
+  'safetyInspection',
+  'safetyInspectionCreate',
+  'safetyInspectionInfo',
+  'safetyInspectionReport',
+  'safetyInspectionSech',
+  'userSelectB',
+  'userSelectBMulti',
+]
+#这里放置之前备份的入口数据(示例),
+[bf1]
+entryDirectory='./src/script/projects-0/entry'
+entryFiles=[
+    'index',
+    'userSelect'
+]
+[bf2]
+entryDirectory='./src/script/projects-a/entry'
+entryFiles=[
+  'index',
+  'materialEntryExit',
+  'materialEntryExitCreate',
+  'materialEntryExitInfo',
+  'materialEntryExitSech',
+  'materialSelect',
+  'scheduleControl',
+  'scheduleControlCreate',
+  'scheduleControlInfo',
+  'scheduleControlSech',
+  'userSelect'
+]

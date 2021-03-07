@@ -1,0 +1,79 @@
+$blue: #02478D;
+$red: #BF324D;
+
+.guwen {
+  font-size: 0;
+
+  img {
+    width: 2.27rem;
+    height: 2.27rem;
+    display: inline-block;
+    margin-bottom: .20rem;
+    margin-right: .14rem;
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.resp-button {
+  width: 1.58rem;
+  height: .68rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $red;
+  color: #fff;
+  font-size: .24rem;
+  margin-bottom: .20rem;
+  letter-spacing: .02rem;
+}
+
+.resp-item {
+  width: 12.08rem;
+  background: #FFF3F6;
+  padding: .18rem .30rem;
+  margin-bottom: .10rem;
+
+  &:nth-child(2n) {
+    background: #F1F8FF;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+  .guwen {
+    font-size: 0;
+
+    img {
+      width: 8.00rem;
+      height: 8.00rem;
+      margin-bottom: 1.00rem;
+      margin-right: 1.00rem;
+
+      &:nth-child(5n) {
+        margin-right: 1.00rem;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .resp-button {
+    width: 8.00rem;
+    height: 2.40rem;
+    font-size: 1.00rem;
+    margin-bottom: 1.00rem;
+    letter-spacing: .10rem;
+  }
+
+  .resp-item {
+    width: 18.00rem;
+    padding: .90rem 1.50rem;
+    margin-bottom: .50rem;
+
+  }
+}
