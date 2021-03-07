@@ -20,7 +20,9 @@
         </div>
       </div>
       <div class="guwen">
-        <img v-for="item in 16" :key="item" :src="person1" alt="" />
+        <img :src="person1" alt="" />
+        <img :src="person2" alt="" />
+        <img :src="person3" alt="" />
       </div>
       <div></div>
       <div class="card-item" id="card1">
@@ -52,7 +54,9 @@ import xFooter from '@script/projects-b/components/footer.vue'
 import banner from '@assets/images/34.png'
 import cardImage1 from '@assets/images/19.png'
 import cardImage2 from '@assets/images/28.png'
-import person1 from '@assets/images/35.png'
+import person1 from '@assets/images/53.png'
+import person2 from '@assets/images/54.png'
+import person3 from '@assets/images/55.png'
 export default {
   data() {
     return {
@@ -60,6 +64,8 @@ export default {
       cardImage1,
       cardImage2,
       person1,
+      person2,
+      person3,
       part: [
         {
           title: '剑桥大学中国遴选中心',

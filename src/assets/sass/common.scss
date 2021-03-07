@@ -179,6 +179,14 @@ $red: #BF324D;
 
 }
 
+.card-title {
+  font-size: .24rem;
+  font-weight: bold;
+  padding-bottom: .20rem;
+  letter-spacing: .04rem;
+  border-bottom: 1px solid #D8D8D8;
+}
+
 .card-item {
   display: flex;
   flex-direction: row;
@@ -193,13 +201,6 @@ $red: #BF324D;
     width: 4.48rem;
     color: #333333;
 
-    .card-title {
-      font-size: .24rem;
-      font-weight: bold;
-      padding-bottom: .20rem;
-      letter-spacing: .04rem;
-      border-bottom: 1px solid #D8D8D8;
-    }
 
     .card-content {
       font-size: .18rem;
@@ -389,6 +390,12 @@ $red: #BF324D;
     height: 16.00rem;
   }
 
+  .card-title {
+    font-size: .96rem;
+    padding-bottom: .40rem;
+    letter-spacing: .08rem;
+  }
+
   .card-item {
     margin-bottom: 2.00rem;
     flex-direction: column !important;
@@ -397,11 +404,6 @@ $red: #BF324D;
       width: 100%;
       color: #333333;
 
-      .card-title {
-        font-size: .96rem;
-        padding-bottom: .40rem;
-        letter-spacing: .08rem;
-      }
 
       .card-content {
         font-size: .62rem;
