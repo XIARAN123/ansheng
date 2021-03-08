@@ -31,7 +31,7 @@
         <li class="form-item">
           <div class="label">电话<span class="must"></span></div>
           <div class="input">
-            <input type="text" v-model="form.phone" />
+            <input type="text" v-model="form.mobile" />
           </div>
         </li>
         <li class="form-item">
@@ -43,11 +43,11 @@
         <li class="form-item">
           <div class="label">请您在此留言，我们会尽快给你回复！</div>
           <div class="input">
-            <textarea v-model="form.message"></textarea>
+            <textarea v-model="form.remark"></textarea>
           </div>
         </li>
         <li class="form-item">
-          <div class="submit-btn">提交</div>
+          <div class="submit-btn" @click="submit">提交</div>
         </li>
       </ul>
     </div>
@@ -57,9 +57,10 @@
 <script>
 require('./connectWindow.scss')
 import logo from '@assets/images/20.png'
-import phone from '@assets/images/16.png'
+import mobile from '@assets/images/16.png'
 import email from '@assets/images/17.png'
 import closeIcon from '@assets/images/18.png'
+
 export default {
   data() {
     return {
@@ -68,7 +69,7 @@ export default {
       types: [
         {
           name: '联系电话',
-          icon: phone,
+          icon: mobile,
           value: '+86 21-62898123',
         },
         {
@@ -84,13 +85,30 @@ export default {
       ],
       form: {
         name: '',
-        phone: '',
+        mobile: '',
         email: '',
-        message: '',
+        remark: '',
+        refer: 'index', // 来源 （写死）首页：index 联系我们：contact-us
       },
     }
   },
   methods: {
+    async submit() {
+      let data = await this.$fetch({
+        url: `/form`,
+        method: 'POST',
+        data: this.form,
+      })
+      console.log(data)
+
+      if (data.status) {
+        this.$Message.success('提交成功')
+        this.$emit('close')
+      } else {
+        this.$Message.warning(data.msg)
+      }
+      console.log(data)
+    },
     close() {
       this.$emit('close')
     },

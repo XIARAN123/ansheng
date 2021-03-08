@@ -1,7 +1,5 @@
 /* eslint-disable */
 import axios from 'axios';
-import { toLower } from 'lodash';
-
 let url = API_BASE_URL
 
 // 创建axios实例
@@ -16,9 +14,11 @@ instance.interceptors.request.use(function (config) {
     console.log(config)
     if(config.method.toLowerCase() === 'get'){
       if(config.url.indexOf('&')){
-        config.url += `&language=${localStorage.getItem('languageSet') || 'zh-CN'}`
+        // config.url += `&language=${localStorage.getItem('languageSet') || 'zh-CN'}`
+        config.url += `&language=zh-CN`
       }else{
-        config.url += `?language=${localStorage.getItem('languageSet') || 'zh-CN'}`
+        // config.url += `?language=${localStorage.getItem('languageSet') || 'zh-CN'}`
+         config.url += `?language=zh-CN`
       }
     }
     return config;
@@ -30,8 +30,12 @@ instance.interceptors.request.use(function (config) {
 // 添加响应拦截器
 instance.interceptors.response.use(
     function (response) {
-        var res = response.data;
-        return res
+      var res = response.data;
+      if(!res.status){
+        
+        // this.$toast.center(data.msg)
+      }
+      return res
     },
     function (error) {
         return Promise.reject(error);

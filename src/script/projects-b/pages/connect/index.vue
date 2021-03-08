@@ -9,10 +9,18 @@
     </div>
     <div class="child-content">
       <ul class="tabs">
-        <li :class="{ active: tabsIndex == 0 }" @click="tabsChange(0)">
+        <li
+          id="card0"
+          :class="{ active: tabsIndex == 0 }"
+          @click="tabsChange(0)"
+        >
           公司信息
         </li>
-        <li :class="{ active: tabsIndex == 1 }" @click="tabsChange(1)">
+        <li
+          id="card1"
+          :class="{ active: tabsIndex == 1 }"
+          @click="tabsChange(1)"
+        >
           人才发展
         </li>
       </ul>
@@ -26,12 +34,17 @@
             </div>
             <div class="c-type-item">
               <img :src="phone" alt="" />
-              <span>+86 21-62898123</span>
+              <span>{{item.phone}}</span>
             </div>
+            <!-- <div class="c-type-item">
+              <img :src="phone" alt="" />
+              <span>+86 21-62898123</span>
+            </div> -->
+           
             <div class="c-type-item">
               <img :src="email" alt="" />
-              <span>news@ambrightgroup.com</span>
-            </div>
+              <span>{{item.email}}</span>
+            </div> 
           </div>
         </div>
         <div class="c-window">
@@ -167,23 +180,36 @@ export default {
         {
           title: '上海总部',
           site: '上海市黄浦区西藏中路336号华旭国际大厦15楼',
+          phone:'+86 21-62898123',
+          email:'news@ambrightgroup.com',
         },
         {
           title: '南京',
-          site: '上海市黄浦区西藏中路336号华旭国际大厦15楼',
+          site: '南京市江北新区浦珠中路300号B2楼',
+          phone:'+86 25- 83755169',
+          email:'news@ambrightgroup.com',
         },
         {
           title: '纽约',
-          site: '上海市黄浦区西藏中路336号华旭国际大厦15楼',
+          site: '美国纽约市里约公园第62大道87- 30- 12E 11374',
+          phone:'1- 617- 8957512',
+          email:'news@ambrightgroup.com',
         },
         {
           title: '商务合作',
+          phone:'+86 21-62898123',
+          email:'news@ambrightgroup.com',
+          
         },
         {
           title: '媒体联络',
+          phone:'+86 21-62898123',
+          email:'news@ambrightgroup.com',
         },
         {
           title: '人才招聘',
+          phone:'+86 21-62898123',
+          email:'news@ambrightgroup.com',
         },
       ],
       form: {
@@ -200,7 +226,7 @@ export default {
     xFooter,
   },
   created() {
-    let index = sessionStorage.getItem('ctab')
+    let index = this.getQueryVariable('tab') || sessionStorage.getItem('ctab')
     if (index) this.tabsIndex = index
     this.getData()
   },
@@ -218,6 +244,17 @@ export default {
         method: 'GET',
       })
       this.jobList = data.list
+    },
+    getQueryVariable(variable) {
+      var query = window.location.search.substring(1)
+      var vars = query.split('&')
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=')
+        if (pair[0] == variable) {
+          return pair[1]
+        }
+      }
+      return false
     },
   },
 }

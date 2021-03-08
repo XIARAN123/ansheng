@@ -89,3 +89,54 @@ $red: #BF324D;
     margin-bottom: .1rem;
   }
 }
+
+
+@media screen and (max-width: 960px) {
+  .aj {
+    .job-item {
+      padding: .4rem 0;
+    }
+  
+    .form-item {
+      width: 100%;
+    }
+  
+    .submit {
+      width: 6.6rem;
+      height: 2rem;
+      margin: 1.2rem auto;
+
+    }
+  
+    .j-site {
+      margin-top: 1rem;
+      font-size: .6rem;
+      line-height: 1.6rem;
+    }
+  
+    .j-left {
+      font-size: .88rem;
+      padding: .4rem 0;
+    }
+  }
+  
+  .job-detail {
+    padding: .80rem 0;
+    color: #333;
+    font-size: .64rem;
+    line-height: 2rem;
+  }
+  
+  .upload-wrap {
+    width: 12rem;
+    height: 6rem;
+    font-size: .6rem;
+  
+  
+    img {
+      width: 1rem;
+      margin-bottom: .2rem;
+    }
+  }
+  
+}

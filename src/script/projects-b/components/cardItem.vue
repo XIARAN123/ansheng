@@ -1,11 +1,18 @@
 <template>
   <div class="card-item">
     <div class="card-left">
-      <div class="card-title">{{ value.title }}</div>
+      <div class="card-title" @click="goTo(value.link)">
+        {{ value.title }}
+      </div>
       <div class="card-content" v-html="value.content"></div>
     </div>
     <div class="card-right" @mouseleave="active = null">
-      <img :src="value.image" alt="" />
+      <img
+        v-if="value.tab && value.tab[active] && value.tab[active].image"
+        :src="value.tab[active].image"
+        alt=""
+      />
+      <img v-else :src="value.image" alt="" />
       <div v-if="value.tab" class="card-tabs">
         <div
           class="flex-center"
@@ -14,6 +21,7 @@
           :style="{ flex: item.row || 1 }"
           v-for="(item, index) in value.tab"
           :key="index"
+          @click="goTo(item.link, index)"
         >
           {{ item.name }}
         </div>
@@ -34,8 +42,13 @@ export default {
     }
   },
   props: ['value'],
+  methods: {
+    goTo(url, index) {
+      this.active = index
+      if (url) {
+        window.open(url)
+      }
+    },
+  },
 }
 </script>
-
-<style>
-</style>

@@ -33,7 +33,7 @@
           <li class="form-item">
             <div class="label">电话<span class="must"></span></div>
             <div class="input">
-              <input type="text" v-model="form.phone" />
+              <input type="text" v-model="form.mobile" />
             </div>
           </li>
           <li class="form-item">
@@ -61,7 +61,7 @@
               >
                 <uploader-unsupport></uploader-unsupport>
                 <uploader-drop>
-                  <uploader-btn>
+                  <uploader-btn :single="true">
                     <div class="upload-wrap">
                       <img :src="uploadIcon" alt="" />
                       <div>点击上传</div>
@@ -76,7 +76,7 @@
             </div>
           </li>
         </ul>
-        <div class="submit">提交</div>
+        <div class="submit" @click="submit">提交</div>
       </div>
     </div>
     <div class="child-footer">
@@ -104,18 +104,21 @@ export default {
         content: '',
       },
       form: {
+        job_id: '',
         name: '',
-        phone: '',
+        mobile: '',
         email: '',
         birthday: '',
-        file: '',
+        attr: '',
       },
       recording: {},
       options: {
         // https://github.com/simple-uploader/Uploader/tree/develop/samples/Node.js
-        target: 'http://10.31.37.2:8080/upload/upload',
+        target: API_BASE_URL + '/upload/file',
         testChunks: false, //不校验
         chunkSize: '10240000',
+        simultaneousUploads: 1,
+        singleFile: true,
       },
       statusText: {
         success: '上传成功',
@@ -136,15 +139,11 @@ export default {
     if (detail) {
       this.detail = detail
     }
+    this.form.job_id = this.getQueryVariable('id')
   },
 
   mounted() {
     this.getData()
-    // 获取uploader对象
-    console.log(this.$refs.uploader)
-    this.$nextTick(() => {
-      window.uploader = this.$refs.uploader.uploader
-    })
   },
 
   methods: {
@@ -160,39 +159,32 @@ export default {
       console.log(data)
       this.info = data
     },
+    async submit() {
+      let data = await this.$fetch({
+        url: `/resume`,
+        method: 'POST',
+        data: this.form,
+      })
+      if (data.status) {
+        this.$Message.success('提交成功')
+      } else {
+        this.$Message.warning(data.msg)
+      }
+    },
     goBack() {
       window.history.go(-1)
     },
     //上传成功的事件
     fileSuccess(rootFile, file, message, chunk) {
-      console.log(message)
-      //将面试邀请code和文件路径去保存到数据库中
-      var href = location.href
-      var split = href.split('?')
-      var invCode = split[1]
-      this.recording.invCode = invCode
-      this.recording.recordingUrl = message
-      // this.$ajax
-      //   .post(
-      //     "http://localhost:8080/interview/recording/saveFileData",
-      //     JSON.stringify(this.recording),
-      //     {
-      //       headers: {
-      //         "Content-Type": "application/json;charset=UTF-8"
-      //       }
-      //     }
-      //   )
-      //   .then(response => {
-      //     if ("ok" == response.data) {
-      //       console.log("上传成功");
-      //     } else {
-      //       alert("上传失败");
-      //     }
-      //   })
-      //   .catch(function(error) {
-      //     alert("上传失败");
-      //     console.log(error);
-      //   });
+      let data = JSON.parse(message)
+      // console.log(data)
+      if (data.status) {
+        this.form.attr = data.data.file_url
+      } else {
+        this.$Message.warning(data.msg)
+        const uploaderInstance = this.$refs.uploader.uploader
+        uploaderInstance.cancel()
+      }
     },
     getQueryVariable(variable) {
       var query = window.location.search.substring(1)

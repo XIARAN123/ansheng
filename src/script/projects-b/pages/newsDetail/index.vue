@@ -38,7 +38,7 @@ require('./scss/index.scss')
 import xHeader from '@script/projects-b/components/header.vue'
 import xFooter from '@script/projects-b/components/footer.vue'
 import newsItem from '@script/projects-b/components/newsItem.vue'
-import banner from '@assets/images/1.png'
+import banner from '@assets/images/4.png'
 import news1 from '@assets/images/27.png'
 export default {
   data() {

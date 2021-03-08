@@ -99,164 +99,178 @@ export default {
       wangqun: [
         {
           name: '中国托马斯',
-          link: '#',
+          link: 'http://thomasschools.com',
         },
         {
           name: '驿渡融媒体',
-          link: '#',
+          link: 'http://www.eduugo.com',
         },
         {
           name: '剑桥大学中国遴选中心',
-          link: '#',
+          link: 'http://www.aceis-china.com',
         },
         {
           name: '上海托马斯',
-          link: '#',
+          link: 'http://sh.thomasschools.com',
         },
         {
           name: '安生国际课程中心',
-          link: '#',
+          link: 'http://ahsp.ambrightgroup.com',
         },
         {
           name: '全国青少年模拟政协活动',
-          link: '#',
+          link: 'http://mcppcc.eduugo.com',
         },
         {
           name: '南京托马斯',
-          link: '#',
+          link: 'http://nj.thomasschools.com',
         },
         {
           name: '剑桥储英工程',
-          link: '#',
+          link: 'http://p.ceischina.com',
         },
         {
           name: '安生美国青年教学使者（AYC）',
-          link: '#',
+          link: 'http://goayc.org',
         },
         {
           name: '济南托马斯',
-          link: '#',
+          link: 'http://jn.thomasschools.com',
         },
         {
           name: '中国高瞻学前教育',
-          link: '#',
-        },
-        {
-          name: '合肥托马斯',
-          link: '#',
-        },
-        {
-          name: '合肥托马斯',
-          link: '#',
+          link: 'http://highscope.org.cn',
         },
         {
           name: '慧思顿高瞻幼儿园',
-          link: '#',
+          link: 'http://www.witstown.org.cn',
         },
+        {
+          name: '合肥托马斯',
+          link: 'http://hf.thomasschools.com',
+        },
+
         {
           name: '中美青年大使（SAYA）',
-          link: '#',
+          link: 'http://saya.ambrightgroup.com',
         },
         {
-          name: '艾思特（AST）考试',
-          link: '#',
+          name: '艾思特（AST）考试局',
+          link: 'http://cn.astexam.org',
         },
         {
           name: '美丞留学咨询服务',
-          link: '#',
+          link: 'http://amedu.cn',
         },
       ],
       about: [
         {
           name: '集团简介',
-          link: '#',
+          link: './about.html#card0',
         },
         {
           name: '创始人简介',
-          link: '#',
+          link: './about.html#card1',
         },
         {
-          name: '发展大事记',
-          link: '#',
+          name: '集团大事计',
+          link: './about.html#card2',
         },
       ],
       yewu: [
         {
           name: '中国托马斯学校',
-          link: '#',
+          link: './business.html#card0',
         },
         {
-          name: '艾思特（AST）考试',
-          link: '#',
+          name: '艾思特（AST）考试局',
+          link: './business.html#card1',
         },
         {
-          name: '驿渡融媒体',
-          link: '#',
+          name: '储英工程',
+          link: './business.html#card2',
         },
         {
           name: '安生国际课程中心',
-          link: '#',
+          link: './business.html#card3',
+        },
+        {
+          name: '升学中心',
+          link: './business.html#card4',
         },
         {
           name: '中国高瞻学前教育',
-          link: '#',
+          link: './business.html#card5',
         },
         {
           name: '外国语专修学校',
-          link: '#',
+          link: './business.html#card6',
         },
         {
           name: '美丞留学咨询服务',
-          link: '#',
+          link: './business.html#card7',
+        },
+        {
+          name: '驿渡融媒体',
+          link: './business.html#card8',
         },
       ],
       zeren: [
         {
           name: '剑桥大学中国遴选中心',
-          link: '',
+          link: './responsibility.html#card0',
         },
         {
           name: '全国青少年模拟政协活动',
-          link: '',
+          link: './responsibility.html#card1',
         },
         {
           name: '安生美国青年教学使者（AYC）',
-          link: '',
+          link: './responsibility.html#card2',
         },
         {
           name: '中美青年大使（SAYA）',
-          link: '',
+          link: './responsibility.html#card3',
         },
         {
           name: '留学生海外安全教育',
-          link: '',
+          link: './responsibility.html#card4',
         },
         {
           name: '海外人才引进',
-          link: '',
+          link: './responsibility.html#card5',
         },
       ],
       ziyuan: [
         {
           name: '顾问及学术团队',
-          link: '#',
+          link: './resource.html#card0',
         },
         {
           name: '安生国际教育科学研究院',
-          link: '#',
+          link: './resource.html#card1',
         },
       ],
       xinwen: [
         {
           name: '集团动态',
-          link: '#',
+          link: './news.html?tab=dynamic',
         },
         {
           name: '重点活动',
-          link: '#',
+          link: './news.html?tab=activity',
         },
       ],
-      lianxi: [],
+      lianxi: [
+        {
+          name: '公司动态',
+          link: './connect.html?tab=0',
+        },
+        {
+          name: '人才发展',
+          link: './connect.html?tab=1',
+        },
+      ],
     }
   },
 }

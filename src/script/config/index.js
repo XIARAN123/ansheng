@@ -27,7 +27,7 @@ export default {
           url: './about.html#card1'
         },
         {
-          name: '集团大事件',
+          name: '集团大事计',
           url: './about.html#card2'
         }
       ]

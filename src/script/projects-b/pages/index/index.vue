@@ -98,7 +98,7 @@
               Scholastic
               Test（简称AST）考试在南京、成都和济南三地同步火热开考。这是继今年8月的考试安排之后，由于考生数量不断攀升、需求不断增加，AST考试委员会特别新增的一次考试。
             </div>
-            <a href="" class="more">查看详情></a>
+            <a href="/newsDetail.html?id=141" class="more">查看详情></a>
           </div>
           <div class="right">
             <img :src="newsImage" alt="" />
@@ -273,31 +273,31 @@ export default {
       yewuList: cfg.menu.filter((v) => !!v.children),
       newsList: [
         {
-          news_id: 1,
-          image: news1,
-          created_at: '2021.01.11',
-          title: '中国首个国际标准化“高考”艾思特AST火热开考',
+          news_id: 145,
+          image: 'http://cdn.ambrt.eduugo.com/upload/images/news_20210201114354161215103455096.jpg',
+          created_at: '2021.02.01',
+          title: '上海托马斯实验学校首届毕业生斩获剑桥预录取通知书',
           category_text: '活动',
         },
         {
-          news_id: 2,
-          image: news1,
-          created_at: '2021.01.09',
-          title: '中国首个国际标准化“高考”艾思特AST火热开考',
+          news_id: 146,
+          image: 'http://cdn.ambrt.eduugo.com/upload/images/news_20210302102049161465164969524.jpg',
+          created_at: '2021.03.02',
+          title: '青春飞扬 致敬新时代',
           category_text: '活动',
         },
         {
-          news_id: 3,
-          image: news1,
-          created_at: '2021.01.06',
-          title: '中国首个国际标准化“高考”艾思特AST火热开考',
+          news_id: 144,
+          image: 'http://cdn.ambrt.eduugo.com/upload/images/news_20210121141509161120970990999.jpg',
+          created_at: '2021.01.21',
+          title: '拜登就任呼吁“重新开始”！中国故事怎么讲？',
           category_text: '动态',
         },
         {
-          news_id: 4,
-          image: news1,
-          created_at: '2021.01.01',
-          title: '中国首个国际标准化“高考”艾思特AST火热开考',
+          news_id: 143,
+          image: 'http://cdn.ambrt.eduugo.com/upload/images/news_20201217100630160817079080643.jpg',
+          created_at: '2020.12.17',
+          title: '活用招生渠道，树品牌好形象',
           category_text: '活动',
         },
       ],
@@ -388,7 +388,7 @@ export default {
       activeAreaIndex: 0,
       activeChildAreaIndex: 0,
       swiperOption: {
-        freeMode: true,
+        freeMode: false,
         slidesPerView: 'auto',
         observer: true, //修改swiper自己或子元素时，自动初始化swiper
         observeParents: true, //修改swiper的父元素时，自动初始化swiper

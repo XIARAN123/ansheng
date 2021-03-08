@@ -1,6 +1,23 @@
 $blue: #02478D;
 $red: #BF324D;
 
+.message {
+  font-size: .2rem !important;
+  padding: .1rem .3rem !important;
+  top: 1.5rem !important;
+  position: fixed !important;
+
+  .message__icon {
+    width: .3rem;
+    height: .3rem;
+  }
+
+  .message__content {
+    line-height: .3rem;
+    padding: 0;
+  }
+}
+
 .page {
   overflow: hidden;
 }
@@ -203,7 +220,7 @@ $red: #BF324D;
 
 
     .card-content {
-      font-size: .18rem;
+      font-size: .16rem;
       line-height: .28rem;
       padding-top: .20rem;
     }
@@ -415,6 +432,11 @@ $red: #BF324D;
     .card-right {
       width: 100%;
       height: auto;
+
+      .card-tabs {
+        height: 1.6rem;
+        font-size: .62rem;
+      }
 
       img {
         width: 100%;

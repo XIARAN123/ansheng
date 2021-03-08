@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="card-right">
-          <img :src="cardImage1" alt="" />
+          <img :src="xszy1" alt="" />
         </div>
       </div>
       <div class="guwen">
@@ -29,11 +29,11 @@
         <div class="card-left">
           <div class="card-title">安生国际教育科学研究院</div>
           <div class="card-content">
-            安生教育集团始终坚持“学者办学、专家治教”的理念和方针，在抓好自身管理队伍、师资队伍、科研队伍建设的同时，十分注重顾问及学术团队建设，聘请了一批国内外知名教育专家组成全球高端智囊团，为安生教育的健康、长远发展提供智力支撑。
+            安生国际教育科学研究院，是安生教育集团直属的从事国内外教育科学研究及成果转化的机构。在长期的国际文化教育交流中，安生积累了丰富的人才资源，拥有一大批国内外教育领域的知名专家学者。研究院充分发挥这批专家的作用，对中国教育国际化过程中的教材融合，课程设置，教学评价，师资培训等进行研究形成理论，指导学校的国际化办学实践，为集团的教育决策提供咨询服务。
           </div>
         </div>
         <div class="card-right">
-          <img :src="cardImage1" alt="" />
+          <img :src="xszy2" alt="" />
         </div>
       </div>
       <div class="resp-button">主要职责</div>
@@ -53,6 +53,8 @@ import xHeader from '@script/projects-b/components/header.vue'
 import xFooter from '@script/projects-b/components/footer.vue'
 import banner from '@assets/images/34.png'
 import cardImage1 from '@assets/images/19.png'
+import xszy1 from '@assets/images/xszy1.png'
+import xszy2 from '@assets/images/xszy2.png'
 import cardImage2 from '@assets/images/28.png'
 import person1 from '@assets/images/53.png'
 import person2 from '@assets/images/54.png'
@@ -66,6 +68,8 @@ export default {
       person1,
       person2,
       person3,
+      xszy1,
+      xszy2,
       part: [
         {
           title: '剑桥大学中国遴选中心',
@@ -105,10 +109,14 @@ export default {
         },
       ],
       respList: [
-        '开展中外比较教育和教学的研究，为教育行政部门提供决策咨询。',
-        '开展中外比较教育和教学的研究，为教育行政部门提供决策咨询。',
-        '开展中外比较教育和教学的研究，为教育行政部门提供决策咨询。',
-        '开展中外比较教育和教学的研究，为教育行政部门提供决策咨询。',
+        '开展中外比较教育和教学的研究，中外融合教育的实践和运用，为教育行政部门提供决策咨询。',
+        '对民办学校开展国际化教育中的管理体制、课程体系、人才培养模式等方面进行实验性研究。',
+        '对国外教育前沿动态与最新成果进行跟踪研究，为中小学教育教学改革、教师发展提供建议与咨询服务。',
+        '开展对高瞻及其他学前教育体系的研究，包括教师发展、课程建设、评价体系等，为学前教育课改提供建议和实践素材。',
+        '开展旨在提升青少年核心素养和创新能力的综合实践活动研究。',
+        '承担地方政府、教育行政部门发布或委托的课题研究和咨询服务。',
+        '开展国内外学术研讨、交流与合作。',
+        '承担并组织开展集团直属K12学校的教师培养和发展任务。',
       ],
     }
   },

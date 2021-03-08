@@ -10,12 +10,14 @@
     <div class="child-content child-content2" style="padding-bottom: 2.85rem">
       <ul class="tabs">
         <li
+          id="card0"
           :class="{ active: params.category == 'dynamic' }"
           @click="tabsChange('dynamic')"
         >
           集团动态
         </li>
         <li
+          id="card1"
           :class="{ active: params.category == 'activity' }"
           @click="tabsChange('activity')"
         >
@@ -51,7 +53,7 @@ import xHeader from '@script/projects-b/components/header.vue'
 import xFooter from '@script/projects-b/components/footer.vue'
 import newsItem from '@script/projects-b/components/newsItem.vue'
 import vPage from '@script/projects-b/components/vPage.vue'
-import banner from '@assets/images/1.png'
+import banner from '@assets/images/4.png'
 export default {
   data() {
     return {
@@ -72,7 +74,7 @@ export default {
     vPage,
   },
   created() {
-    let index = sessionStorage.getItem('ntab')
+    let index = this.getQueryVariable('tab') || sessionStorage.getItem('ntab')
     if (index) this.params.category = index
   },
 
@@ -100,6 +102,17 @@ export default {
       this.newsList = data.list
 
       // this.newsList = JSON.parse(JSON.stringify(data.list))
+    },
+    getQueryVariable(variable) {
+      var query = window.location.search.substring(1)
+      var vars = query.split('&')
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=')
+        if (pair[0] == variable) {
+          return pair[1]
+        }
+      }
+      return false
     },
   },
 }
